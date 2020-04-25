@@ -9,4 +9,5 @@ services:
     tty: true
     environment:
       NETLIFY_AUTH_TOKEN: ${NETLIFY_AUTH_TOKEN}
-      
+      NETLIFY_SITE_NAME: ${NETLIFY_SITE_NAME}
+      NETLIFY_PUBLISH_FOLDER: ${NETLIFY_PUBLISH_FOLDER}
