@@ -7,6 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile
     tty: true
+    volumes:
+      - ./public:/netlify-work/public:rw
     environment:
       NETLIFY_AUTH_TOKEN: ${NETLIFY_AUTH_TOKEN}
       NETLIFY_SITE_NAME: ${NETLIFY_SITE_NAME}

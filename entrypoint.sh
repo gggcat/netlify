@@ -32,12 +32,12 @@ case $1 in
     draft)
         # Deploy - live draft
         netlify sites:list
-        netlify deploy --message "update contents: site_name=${NETLIFY_SITE_NAME}, release_date=$(date +'%Y/%m/%d %H:%M:%S')"
+        netlify deploy --dir=. --message "update contents: site_name=${NETLIFY_SITE_NAME}, release_date=$(date +'%Y/%m/%d %H:%M:%S')"
         ;;
     deploy)
         # Deploy
         netlify sites:list
-        netlify deploy --prod --message "update contents: site_name=${NETLIFY_SITE_NAME}, release_date=$(date +'%Y/%m/%d %H:%M:%S')"
+        netlify deploy --dir=. --prod --message "update contents: site_name=${NETLIFY_SITE_NAME}, release_date=$(date +'%Y/%m/%d %H:%M:%S')"
         ;;
     *)
         echo "entrypoint.sh"
