@@ -47,8 +47,3 @@ case $1 in
         echo "    deploy: netlify deploy"
         ;;
 esac
-
-#
-# Delete netlifyconf
-#
-rm -rf ${NETLIFY_CONFDIR}
